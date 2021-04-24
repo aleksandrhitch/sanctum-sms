@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "fadfa3fa-0526-4ce1-b8ae-3ab665ffdd44",
+		"name": "sanctum",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/sanctum/admin/login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|jVCpuebNgN6UX67VRx1RHXbmlZrZ1ljQLifJWlcl",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "secret",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{local}}/api/sanctum/admin/login",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"sanctum",
+						"admin",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/get-admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|rptdymfaFew3yqw2n00vq6nWo6LCmpxmE5shVth7",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/api/get-admin",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"get-admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/sanctum/client/send-sms-code",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone",
+							"value": "+380980000000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{local}}/api/sanctum/client/send-sms-code",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"sanctum",
+						"client",
+						"send-sms-code"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/sanctum/client/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone",
+							"value": "+380980000000",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "4201",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{local}}/api/sanctum/client/login",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"sanctum",
+						"client",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/get-client",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|nKalfa2HMytauQF12d8Vn3UpnddRpFGyV7mA15Dh",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{local}}/api/get-client",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"get-client"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
